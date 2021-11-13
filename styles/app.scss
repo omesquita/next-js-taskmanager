@@ -1,0 +1,101 @@
+@import "~bootstrap/scss/bootstrap";
+
+@font-face {
+  font-family: Biennale Regular;
+  font-style: normal;
+  font-weight: normal;
+  src: url("../public/fonts/BiennaleRegular.otf") format('opentype');
+}
+
+html {
+  height: 100%;
+  font-family: "Biennale Regular";
+
+}
+
+body {
+  height: 100%;
+  font-family: "Biennale Regular";
+}
+
+#__next {
+  height: 100%;
+  display: flex;
+  flex: 1 1 0;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  -webkit-box-pack: center;
+  -webkit-box-align: center;
+  padding: 0;
+}
+
+@import "./config.scss";
+@import './login.scss';
+@import "./header.scss";
+@import "./filter.scss";
+@import "./footer.scss";
+@import "./list.scss";
+@import "./item.scss";
+@import "./modal.scss";
+@import "./register.scss";
+
+button {
+  display: block;
+  border: none;
+  background-color: $primaryColor;
+  color: white;
+  border-radius: 12px;
+  font-size: 16px;
+  height: 40px;
+  align-items: center;
+}
+
+input, select {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  letter-spacing: 0.01em;
+  color: $primaryColor;
+  min-width: 175px;
+  background-color: transparent;
+  font-family: 'Biennale Regular';
+
+  border-top-width: 0;
+  border-left-width: 0;
+  border-right-width: 0;
+  border-bottom-width: 0.1em;
+  border-color: $mediumGreyColor;
+
+  outline: none;
+
+  cursor: pointer;
+
+  &:focus {
+    border-color: $primaryColor;
+  }
+
+  &::placeholder { // Chrome, Firefox, Opera Safari 10+
+    color: $mediumGreyColor;
+    opacity: 1;
+  }
+
+  &:-ms-input-placeholder { //Internet Explore
+    color: $mediumGreyColor;
+  }
+
+  &::-ms-input-placeholder { // Microsoft Edge
+    color: $mediumGreyColor;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  input, select {
+    border-top-width: 1px;
+    border-left-width: 1px;
+    border-right-width: 1px;
+    border-bottom-width: 1px;
+    border-radius: 8px;
+    padding: 5px;
+  }
+}

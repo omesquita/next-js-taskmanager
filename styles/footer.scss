@@ -1,0 +1,62 @@
+@import './config.scss';
+
+.container-footer {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+  padding-bottom: 10px;
+  border-top-width: 0;
+
+  span {
+    display: none;
+  }
+
+  button {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    background-color: $lightGreyColor;
+    border-color: $primaryColor;
+    border-width: 1px;
+    border-style: solid;
+    width: 96%;
+    padding: 10px 10px 10px 15px;
+    color: $primaryColor;
+    font-size: 14px;
+    letter-spacing: 0.01em;
+
+    img {
+      padding-right: 15px;
+    }
+
+    span {
+      color: $primaryColor;
+      font-size: 14px;
+      letter-spacing: 0.01em;
+    }
+  }
+
+
+  @media screen and(min-width: 1024px) {
+    height: 60px;
+    border-top-color: $lightGreyColor;
+    border-top-width: 2px;
+    border-left-width: 0;
+    border-right-width: 0;
+    border-bottom-width: 0;
+    border-style: solid;
+    padding-bottom: 0;
+
+    button {
+      display: none;
+    }
+
+    span {
+      display: block;
+      font-size: 14px;
+      color: $primaryColor;
+    }
+  }
+}

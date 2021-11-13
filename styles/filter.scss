@@ -1,0 +1,93 @@
+@import './config.scss';
+
+.container-filter {
+  margin-top: 16px;
+  display: flex;
+  flex-direction: column;
+  width: 95%;
+  background-color: $lightGreyColor;
+  border-radius: 12px;
+  padding: 10px;
+
+  .title {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+
+    span {
+      color: $primaryColor;
+      font-size: 18px;
+      letter-spacing: 0.01em;
+    }
+  }
+
+  .form {
+    display: none;
+  }
+
+  .filtersMobile {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 10px;
+
+    div {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: center;
+      padding-bottom:10px;
+
+      label {
+        font-size: 16px;
+        letter-spacing: 0.01em;
+        color: $primaryColor;
+        min-width: 110px;
+        margin: 0;
+      }
+    }
+  }
+
+  @media screen and(min-width: 1024px) {
+    padding: 20px;
+
+    .filtersMobile {
+      display: none;
+    }
+
+    .title {
+      img {
+        display: none;
+      }
+    }
+
+    .form {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: center;
+
+      label {
+        font-size: 16px;
+        letter-spacing: 0.01em;
+        color: $primaryColor;
+        margin: 0 10px;
+      }
+
+      input, select {
+        border-color: $primaryColor;
+      }
+
+      .line {
+        border-color: $primaryColor;
+        border-width: 1px;
+        border-style: solid;
+        height: 40px;
+        width: 0;
+        margin-left: 15px;
+      }
+    }
+  }
+}

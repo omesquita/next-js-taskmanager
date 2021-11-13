@@ -1,0 +1,132 @@
+@import './config.scss';
+
+.container-register {
+  .logo {
+    width: 178.35px;
+    display: block;
+    margin: auto auto 30px;
+  }
+
+  .error {
+    text-align: center;
+    color: $errorColor;
+    font-weight: bold;
+    max-width: 300px;
+  }
+
+  .input {
+    display: flex;
+    flex-direction: row;
+    padding: 10px;
+
+    img {
+      width: 16px;
+      height: 16px;
+      margin-right: 10px;
+      margin-top: 3px;
+    }
+
+    input {
+      width: 224px;
+      font-size: 14px;
+      letter-spacing: 0.01em;
+      color: $primaryColor;
+      border-radius: 0;
+      border-top-width: 0;
+      border-left-width: 0;
+      border-right-width: 0;
+      border-bottom-width: 0.1em;
+      border-color: $mediumGreyColor;
+      padding-bottom: 8px;
+
+      outline: none;
+
+      &:focus {
+        border-color: $primaryColor;
+      }
+
+      &::placeholder {
+        color: $mediumGreyColor;
+        opacity: 1;
+      }
+
+      &:-ms-input-placeholder {
+        color: $mediumGreyColor;
+      }
+
+      &::-ms-input-placeholder {
+        color: $mediumGreyColor;
+      }
+    }
+  }
+
+  button {
+    width: 100%;
+    height: 56px;
+    margin-top: 30px;
+  }
+
+  .loading {
+    background-color: $mediumGreyColor;
+  }
+
+  .register-title {
+    margin-top: 20px;
+    text-align: center;
+    margin-bottom: 20px;
+    color: $primaryColor;
+    font-weight: bold;
+    font-size: 18px;
+  }
+
+  .backButton {
+    text-align: center;
+    text-decoration: underline;
+    font-weight: bold;
+    font-size: 14px;
+    margin-top: 30px;
+  }
+
+  @media screen and(min-width: 1024px) {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+
+    .logo {
+      width: 520px;
+      margin: 0;
+    }
+
+    .error {
+      max-width: none;
+    }
+
+    form {
+      border-style: solid;
+      border-color: $primaryColor;
+      border-width: 0.1em;
+      border-radius: 32px;
+      padding: 80px 40px;
+
+      .input {
+        img {
+          width: 20px;
+        }
+
+        input {
+          width: 343px;
+        }
+      }
+
+      .backButton {
+        cursor: pointer;
+
+        &:hover {
+          color: $primaryColor;
+        }
+      }
+    }
+  }
+}

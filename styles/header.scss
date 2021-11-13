@@ -1,0 +1,77 @@
+@import './config.scss';
+
+.container-header {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom-width: 1.5px;
+  border-bottom-color: $lightGreyColor;
+  border-bottom-style: solid;
+  padding: 24px 0;
+
+  .logo {
+    width: 89px;
+    margin-left: 24px;
+  }
+
+  button {
+    display: none;
+  }
+
+  .desktop {
+    display: none;
+  }
+
+  .mobile {
+    img {
+      width: 24px;
+      height: 24px;
+      margin-right: 24px;
+    }
+  }
+
+  span {
+    color: $primaryColor;
+    font-size: 12px;
+    margin-right: 10px;
+  }
+
+  @media screen and(min-width: 1024px) {
+    .mobile {
+      display: none;
+    }
+
+    .logo {
+      width: 120px;
+      margin-left: 80px;
+    }
+
+    .desktop {
+      display: flex;
+      flex-direction: row;
+      margin-right: 80px;
+      align-items: center;
+      justify-items: center;
+
+      span {
+        font-size: 20px;
+        margin-right: 30px;
+
+      }
+    }
+
+    button {
+      display: block;
+      border: none;
+      background-color: $secondaryColor;
+      width: 175px;
+
+      span {
+        font-size: 20px;
+        color: white;
+      }
+    }
+  }
+}
